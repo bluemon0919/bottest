@@ -21,8 +21,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 
 	bot, err := linebot.New(
-		os.Getenv("1a5df2f9ef2381b290c3954b1ff0dd3f"),
-		os.Getenv("WRyh+ZsToMynMG5EoCJR8StGTCdLi6y78WeEIxfZo7G1MQiIOuihTaZbf47BDFsy34zd7gtHht2aXiCPuL4Ub07jlom36MMTDP9NIusH7dgtDPzlwX0xNwOH0SYmMmrxrOGMPYd6rRI65kljAy8+xQdB04t89/1O/w1cDnyilFU="),
+		os.Getenv("LINE_BOT_CHANNEL_SECRET"),
+		os.Getenv("LINE_BOT_CHANNEL_TOKEN"),
 		linebot.WithHTTPClient(urlfetch.Client(ctx)),
 	)
 	if err != nil {
